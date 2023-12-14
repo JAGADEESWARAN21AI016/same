@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <h1>String Mathods</h1>
+<pre>
+1.String length()
+2.String slice()
+3.String substring()
+4.String substr()
+5.String replace()
+6.String replaceAll()
+7.String toLowerCase
+8.String toUpperCase
+9.String concat()
+10.String trim()
+11.String trimStart()
+12.String trimEnd()
+13.String padStart()
+14.String padEnd()
+15.String charAt()
+16.String charCodeAt()
+17.String split()
+</pre>
+
+<h5><ins>Output</ins></h5>
+
+<h4>1.String length()</h4>
+<p id="o1"></p>
+
+<h4>2.String slice()</h4>
+<p id="o2">String length</p>
+
+<h4>3.String substring()</h4>
+<p id="o3"></p>
+
+<h4>4.String substr()</h4>
+<p id="o4"></p>
+
+<h4>5.String replace()</h4>
+<p id="o5"></p>
+
+<h4>6.String replaceAll()</h4>
+<p id="o6"></p>
+
+<h4>7.String toLowerCase()</h4>
+<p id="o7"></p>
+
+<h4>8.String toUpperCase()</h4>
+<p id="o8"></p>
+
+<h4>9.String concat()</h4>
+<p id="o9"></p>
+
+<h4>10.String trim()</h4>
+<p id="o10"></p>
+
+<h4>11.String trimStart()</h4>
+<p id="o11"></p>
+
+<h4>12.String trimEnd()</h4>
+<p id="o12"></p>
+
+<h4>13.String padStart()</h4>
+<p id="o13"></p>
+
+<h4>14.String padEnd()</h4>
+<p id="o14"></p>
+
+<h4>15.String charAt()</h4>
+<p id="o15"></p>
+
+<h4>16.String charCodeAt()</h4>
+<p id="o16"></p>
+
+<h4>17.String split()</h4>
+<p id="o17"></p>
+
+
+
+
+
+<script>
+
+    //String length()
+    let o1="Prasanth"
+    document.getElementById('o1').innerHTML=o1.length
+
+    //String slice()
+    let o2="Prasanth"
+    document.getElementById('o2').innerHTML=o2.slice(0,9)
+
+    //String substring()
+    let o3="Kitty"
+    document.getElementById('o3').innerHTML=o3.substring(0,3)
+
+    //String substr(startIndex,length)
+    let o4="Chennai"
+    document.getElementById('o4').innerHTML=o4.substr(0,3)
+
+    //String replace(existing string, new string)
+    let o5="Hi, I am Prasanth"
+    document.getElementById('o5').innerHTML=o5.replace(/Prasanth/i,"Shalini")
+
+    //String replaceAll()
+    let o6="America is the wast country , America has a well resources "
+    document.getElementById('o6').innerHTML=o6.replaceAll("America","India")
+
+    //String toLowerCase()
+    let o7="CHENNAI is A captial Of TN"
+    document.getElementById('o7').innerHTML=o7.toLowerCase()
+
+    //String toUpperCase()
+    let o8="prasanth Is a bad BOY"
+    document.getElementById('o8').innerHTML=o8.toUpperCase()
+
+    //String concat()
+    let o9="Artificial Intelligence and"
+    let oo9=" Data Science"
+    document.getElementById('o9').innerHTML=o9.concat(oo9)
+
+    //String trim()
+    let o10="    Hello!    "
+    document.getElementById('o10').innerHTML=o10.trim()
+
+    //String trimStart()
+    let o11="     Hello!    "
+    document.getElementById('o11').innerHTML=o11.trimStart()
+
+    //String trimEnd()
+    let o12="    Hello!    "
+    document.getElementById('o12').innerHTML=o12.trimEnd()
+
+    //String padStart(TotalSize,"value")
+    let o13="5"
+    document.getElementById('o13').innerHTML=o13.padStart(3,"H")
+
+    //String padEnd(TotalSize,"value")
+    let o14="5"
+    document.getElementById('o14').innerHTML=o14.padEnd(3,"H")
+
+    //String charAt() "TO FIND INDEX POSITIONED VALUE"
+    let o15="Prasanth"
+    document.getElementById('o15').innerHTML=o15.charAt(5)
+
+    //String charCodeAt()  "UNICODE"
+    let o16="PrasAnth"
+    document.getElementById('o16').innerHTML=o16.charCodeAt(4)
+
+    //String split()
+    let o17="Prasanth is bad boy"
+    let split = o17.split(' ')
+    let count = Number(split.length())
+    document.getElementById('o17').innerHTML=count
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arithmetic Calculator</title>
+
+    <style>
+        body
+        {
+            background-color: rgb(128, 128, 128);
+        }
+        #cont
+        {
+            background-color: black;
+            color:white;
+            padding:20px 50px;
+            margin:220px 200px;
+            height:500px;
+            text-align: center;
+            border-radius: 20px;
+            border:7px dashed ;
+            font-size: 20px;
+        }
+        h1
+        {
+            margin-top: 80px;
+        }
+        button
+        {
+            margin-bottom: 100px;
+            font-size: 20px;
+        }
+        #output
+        {
+            font-size: 100px;
+        }
+        label,input
+        {
+            font-size:40px;
+        }
+        select
+        {
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <h1>Arithmetic Calculator</h1>
+        
+        <label>A=</label>
+        <input type="text" id="input1" size="3">
+        
+        <select id="input2">
+            <option name="+">+</option>
+            <option name="-">-</option>
+            <option name="*">*</option>
+            <option name="/">/</option>
+            <option name="%">%</option>
+            <option name="**">**</option>
+        </select>
+        
+        <label>B=</label>
+        <input type="text" id="input3" size="3">  <br><br>
+        
+        <button type="button">Perform</button>
+        
+    </div>
+<script>
+  const button = document.querySelector('button')
+
+  button.addEventListener('click',call)
+
+  
+
+  function call()
+  {
+    let input1 = Number(document.getElementById('input1').value)
+    let input2 = String(document.getElementById('input2').value)
+    let input3 = Number(document.getElementById('input3').value)
+
+    let add = input1 + input3
+    let sub = input1 - input3
+    let mul = input1 * input3
+    let division = input1 / input3
+    let mods = input1 % input3
+    let pows = input1 ** input3
+
+    const resultdiv = document.createElement('div')
+    resultdiv.id="output"
+
+    document.getElementById('cont').appendChild(resultdiv)
+
+
+    if(input2 === "+")
+    {
+        document.getElementById('output').innerHTML=add
+    }
+    else if(input2 === "-")
+    {
+        document.getElementById('output').innerHTML=sub
+    }
+    else if(input2 === "*")
+    {
+        document.getElementById('output').innerHTML=mul
+    }
+    else if(input2 === "/")
+    {
+        document.getElementById('output').innerHTML=division
+    }
+    else if(input2 === "%")
+    {
+        document.getElementById('output').innerHTML=mods
+    }
+    else
+    {
+        document.getElementById('output').innerHTML=pows
+    }
+
+  }
+</script>
+</body>
+</html>

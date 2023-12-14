@@ -1,0 +1,6 @@
+\b - backspace
+\f - from feed
+\n- new line
+\r - carriage return
+\t - horizontal space
+\v - vertical space

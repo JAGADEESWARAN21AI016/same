@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays</title>
+    <style>
+        li
+        {
+            list-style-type: disc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JS Arrays</h1>
+    <h5>Array using for loop</h5>
+<p id="out"></p>
+    
+
+    <script>
+        let a  = ["apple","banana","cherry"]
+
+        let txt = "<ul>"
+            for(let i=0;i < a.length;i++)
+            {
+                txt += "<li>" + a[i] + "</li>"
+            }
+        txt += "</ul>"
+        document.getElementById("out").innerHTML = txt
+    </script>
+
+<h5>Array using forEach loop</h5>
+<p id="outt"></p>
+<script>
+    let b = ["apple","banana","cherry"]
+    let txt1 = "<ul>"
+    b.forEach(call)
+    txt1 += "</ul>"
+    document.getElementById("outt").innerHTML = txt1
+    function call(value)
+    {
+        txt1 = txt1 + "<li>" + value + "</li>"
+    }
+</script>
+
+<h5>List Created by the HTML tags</h5>
+<ul>
+    <li>apple</li>
+    <li>banana</li>
+    <li>Cherry</li>
+</ul>
+
+</body>
+</html>

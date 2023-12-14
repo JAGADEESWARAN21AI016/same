@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Atributes</title>
+    <style>
+        label
+        {
+            display : inline-block;
+            width:30%;
+        }
+    </style>
+</head>
+<body>
+
+    <form autocomplete="on">
+    <label for="fname">First Name</label>
+    <input  type="text" id="fname" name="fname"  required autofocus> <br>
+    
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" required > <br>
+
+    <label>Date of Birth</label>
+    <input type="date" id="dob" min="2000-01-01" required > <br>
+
+    <label for="age">Age</label>
+    <input type="number" id="age" required> <br>
+
+    <label for="faname">Father's Name</label>
+    <input  type="text" id="faname" name="faname"  required> <br>
+
+    <button type="submit" onclick="call()">Submit</button>
+    </form>
+
+<script>
+    function call()
+    {
+        let fname=String(document.getElementById('fname').value)
+        let lname=String(document.getElementById('lname').value)
+        let dob=String(document.getElementById('dob').value)
+        let age=Number(document.getElementById('age').value)
+        let faname=String(document.getElementById('faname').value)
+
+        
+
+    }
+</script>
+</body>
+</html>

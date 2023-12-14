@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Atributes</title>
+    <style>
+        label
+        {
+            display : inline-block;
+            width:30%;
+        }
+    </style>
+</head>
+<body>
+
+    <form autocomplete="on">
+    <label for="fname">First Name</label>
+    <input  type="text" id="fname" name="fname"  required autofocus> <br>
+    
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" required > <br>
+
+    <label>Date of Birth</label>
+    <input type="date"  min="2000-01-01" required > <br>
+
+    <label for="age">Age</label>
+    <input type="number" id="age" required> <br>
+
+    <label for="faname">Father's Name</label>
+    <input  type="text" id="faname" name="faname"  required> <br>
+
+    <label>Date of Birth</label>
+    <input type="date"  max="1990-12-31" required > <br>
+
+    
+
+    <label for="clg">College Name</label>
+    <input type="text" size="22" id="clg" value="Nandha Engineering College" disabled> <br>
+ 
+    <label>Choose your Department</label> <br>
+    <input type="radio" name="dept" value="aids"> <label>AI&DS</label> <br>
+    <input type="radio" name="dept" value="ag">   <label>Agri</label> <br>
+    <input type="radio" name="dept" value="civ">  <label>Civil</label> <br>
+    <input type="radio" name="dept" value="cs">   <label>ECE</label> <br>
+    <input type="radio" name="dept" value="ece">  <label>EEE</label> <br>
+    <input type="radio" name="dept" value="eee">  <label>IT</label> <br>
+    <input type="radio" name="dept" value="iot">  <label>IOT</label> <br>
+    <input type="radio" name="dept" value="mec">  <label>Mech</label> <br>
+
+    <label>Languages Known</label> <br>
+    <input type="checkbox"><label>C</label> <br>
+    <input type="checkbox"><label>C++</label> <br>
+    <input type="checkbox"><label>Java</label> <br>
+    <input type="checkbox"><label>Python</label> <br>
+    <input type="checkbox"><label>HTML</label> <br>
+    <input type="checkbox"><label>XML</label> <br>
+    <input type="checkbox"><label>CSS</label> <br>
+    <input type="checkbox"><label>Java Script</label> <br>
+    <input type="checkbox"><label>Kotlin</label> <br>
+    <input type="checkbox"><label>Php</label> <br>
+    
+
+
+
+
+    <label>University</label>
+    <input type="text" value="Anna University" readonly> <br>
+    
+
+    <label for="tel">Phone</label>
+    <input type="text" id="tel" pattern="[0-9{10}]" maxlength="10" required> <br>
+
+
+
+  
+    <label for="pin">PIN</label>
+    <input type="text" id="pin" size="4" maxlength="6" placeholder="XXXXXX" required> <br>
+
+    <label for="pass">Password</label>
+    <input type="text" id="pass" maxlength="10" required> <br>
+
+    <label>Choose your Fav Even Number</label>
+    <input type="number"  size="1" step="2" required autocomplete="off"> <br>
+
+    <label>Education</label>
+    <input type="image" alt="Education" scr="data:image/jpeg;base64,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" height="50px;" width="80px;"><br>
+
+
+    <input type="submit" value="Register" >
+    <input type="reset" value="Reset">
+
+    
+
+    </form>
+
+</body>
+</html>

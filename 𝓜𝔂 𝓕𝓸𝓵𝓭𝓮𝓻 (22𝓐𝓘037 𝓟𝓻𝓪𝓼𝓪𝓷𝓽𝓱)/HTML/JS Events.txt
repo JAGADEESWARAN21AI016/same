@@ -1,0 +1,7 @@
+onclick
+ondblclick
+onchange
+onmouseover
+onmouseout
+onkeydown
+onload

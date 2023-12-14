@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Objects</h1>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+        
+        let car = {name:'volvo',model:'2As4',price :"13 lakhs"}
+        document.getElementById('demo').innerHTML=car.price+ car.model 
+
+        let person =
+        {
+            name:"Prasanth",
+            branch:"b.tech",
+            year:2,
+            fullName : function()
+                      {
+                      return this.name +" "+ this.year+ "nd year"
+                      }
+        }
+        document.getElementById('demo2').innerHTML=person.fullName()
+        
+        
+        const person2 = 
+        {
+        firstName: "John",
+        lastName : "Doe",
+        id       : 5566,
+        fullName : function() 
+                    {
+                    return this.firstName + " " + this.lastName;
+                    }
+        }
+        document.getElementById('demo3').innerHTML=person2.fullName()
+  
+
+
+        //call()
+        const person3 = 
+        {
+        firstName: "John",
+        lastName : "Doe",
+        id       : 5566,
+        fullName : function() 
+                    {
+                    return call.firstName + " " + call.lastName;
+                    }
+        }
+        document.getElementById('demo4').innerHTML=person3.fullName()
+
+        //apply()
+        const person4 = 
+        {
+        firstName: "John",
+        lastName : "Doe",
+        id       : 5566,
+        fullName : function() 
+                    {
+                    return apply.firstName + " " + apply.lastName;
+                    }
+        }
+        document.getElementById('demo5').innerHTML=person4.fullName()
+
+        //bind()
+        const person5 = 
+        {
+        firstName: "John", 
+        lastName : "Doe",
+        id       : 5566,
+        fullName : function() 
+                    {
+                    return bind.firstName + " " + bind.lastName;
+                    }
+        }
+        document.getElementById('demo6').innerHTML=person5.fullName()
+
+
+    </script>
+</body>
+</html>

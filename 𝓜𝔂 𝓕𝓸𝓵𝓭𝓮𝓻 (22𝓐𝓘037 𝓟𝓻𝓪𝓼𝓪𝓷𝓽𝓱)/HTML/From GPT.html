@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker with Background</title>
+    <style>
+        body {
+            background-color: rgb(92, 100, 88);
+        }
+        .cont {
+            background-color: rgb(46, 45, 45);
+            color: aliceblue;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        #output1 {
+            color: green;
+            padding: 0 20px;
+            border-radius: 20px;
+        }
+        .background-iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <iframe class="background-iframe" src="background.html" frameborder="0"></iframe>
+    <div class="cont">
+        <h1>Password Checker</h1>
+        <label>Enter Password</label><br>
+        <input type="password" id="input1">
+        <br><br>
+        <label>Verify Password</label><br>
+        <input type="password" id="input2">
+        <br><br>
+        <div class="buttonclass">
+            <button onclick="call()" type="submit">Verify</button>
+        </div>
+        <div id="result">
+            <p id="output1"></p>
+        </div>
+    </div>
+    <script>
+        function call() {
+            let input1 = String(document.getElementById("input1").value);
+            let input2 = String(document.getElementById("input2").value);
+            let number1 = input1.length;
+            let number2 = input2.length;
+            let c = "Verified!";
+            let w = "Password Mismatched";
+            let n = "Enter the password first!";
+            if ((input1 === input2) && (number1 === 0 && number2 === 0)) {
+                document.getElementById("output1").innerHTML = n;
+            } else if ((number1 > 0 && number2 === 0) || (number1 === 0 && number2 > 0)) {
+                document.getElementById("output1").innerHTML = n;
+            } else if ((input1 === input2) && (number1 === number2)) {
+                document.getElementById("output1").innerHTML = c;
+            } else {
+                document.getElementById("output1").innerHTML = w;
+            }
+        }
+    </script>
+</body>
+</html>

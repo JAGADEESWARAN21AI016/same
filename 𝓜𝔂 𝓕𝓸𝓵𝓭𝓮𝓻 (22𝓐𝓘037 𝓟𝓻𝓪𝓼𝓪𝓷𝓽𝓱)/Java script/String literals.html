@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String literals</title>
+</head>
+<body>
+<script>
+//Back-Tick Syntax
+let a = `This is a string using backtick`
+console.log(a)
+
+//Quortes inside
+let b = `This is a string using "backtick"`
+console.log(b)
+
+//Multiline strings
+let c = `This
+ is
+  a 
+  string
+   using
+    backtick`
+console.log(c)
+
+//Variable Substutions
+let initial = "R.S"
+let name = "Prasanth"
+let text = `Hi Mr.${initial}.${name}`
+console.log(text)
+
+//Expression substution
+let a1 = 10
+let b1 = 20
+let sum = `The addition of ${a1} and ${b1} is :${(a1+b1)}`
+console.log(sum)
+
+let a11 = 10
+let b11 = 4000
+let Sum = `The division of ${a11} and ${b11} is :${(a11/b11).toFixed(3)}`
+console.log(Sum)
+
+
+        
+</script>
+</body>
+</html>   

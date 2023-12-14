@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: rgb(243, 205, 134);
+        }
+        #cont
+        {
+            background-color: rgb(245, 172, 37);
+            border:2px solid white;
+            padding:40px 40px 100px 40px;
+            margin:100px 250px;
+            text-align: center;
+            font-size: 30px;
+        }
+        h1
+        {
+            margin-top: 0px;
+            text-align: center;
+        }
+        select
+        {
+            font-size: 30px;
+            background-color: grey;
+            color:
+        }
+        #output
+        {
+            margin-top: 60px;
+        }
+        button
+        {
+            text-align: center;
+            font-size: x-large;
+            color:aqua;
+            background-color: blueviolet;
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <h1>Select your Department</h1>
+
+        <select id="input">
+            <option value="10">10th Passed</option>
+            <option value="12">12th Passed</option>
+            <option value="UG">Under Graduate</option>
+            <option value="PG">Post Graduate</option>
+        </select>  <br> <br>
+
+        <button type="button">Show Stats</button>
+    </div>
+<script>
+    const button = document.querySelector('button')
+    button.addEventListener('click',call)
+
+    
+
+    function call()
+    {
+        let input = document.getElementById('input')
+        let course = input.options[input.selectedIndex].value
+        let text = ""
+
+       
+
+        switch(course)
+        {
+            case('10'):
+            text = "You need to complete 12th,UG and PG"
+            break
+
+            case('12'):
+            text = "You need to complete UG and PG"
+            break
+
+            case('UG'):
+            text = "You need to complete PG"
+            break
+
+            case('PG'):
+            text = "You completed all 👌"
+            break
+        }
+        const resultdiv = document.createElement('div')
+        resultdiv.id="output"
+        document.getElementById('cont').appendChild(resultdiv)
+        document.getElementById('output').innerHTML=text
+
+    }
+</script>
+</body>
+</html>
